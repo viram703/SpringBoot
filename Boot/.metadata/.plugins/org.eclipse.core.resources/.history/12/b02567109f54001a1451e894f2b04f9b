@@ -1,0 +1,70 @@
+package com.peaasInter.viram.BootJpa.Controller;
+
+import javax.websocket.server.PathParam;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureOrder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.peaasInter.viram.BootJpa.dao.CustomerRepository;
+import com.peaasInter.viram.BootJpa.model.Customer;
+
+@Controller
+public class CustomerController 
+{
+	@Autowired
+	CustomerRepository repo;
+	
+	
+	@RequestMapping("/home")
+	public String home()
+	{
+		return "home.jsp";
+	}
+	@RequestMapping("/addCustomer")
+	public String addCustomer(Customer customer)
+	{
+		repo.save(customer);
+		return "home.jsp";
+	}
+	/**
+	@RequestMapping("/getCustomer")
+	public ModelAndView getCustomer(@RequestParam int id)
+	{
+		ModelAndView mv=new ModelAndView("show.jsp");
+		
+		Customer customer=repo.findById(id).orElse(new Customer());
+		repo.save(customer);
+		
+		//System.out.println(repo.findByName("viram"));
+		//System.out.println(repo.findByNameSorted("viram"));
+
+		mv.addObject(customer);
+		return mv;
+	}
+	*/
+	
+	@RequestMapping("/Customer")
+	@ResponseBody
+	public List<Customer> getCustomer()
+	{
+		return repo.findAll().toString();
+	}
+	
+	@RequestMapping("/Customer/{id}")
+	@ResponseBody
+	public Customer getCustomer (@PathVariable int id)
+	{
+		return repo.findById(id)
+	}
+	
+	
+
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.peaasInter.viram.SpringDataJpa.model;
+
+public class Employe {
+
+}

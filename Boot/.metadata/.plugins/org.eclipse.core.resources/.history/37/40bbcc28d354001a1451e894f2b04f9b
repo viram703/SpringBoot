@@ -1,0 +1,15 @@
+package com.peaasInter.viram.SpringDataJpa.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Employe {
+	@Id
+	@GeneratedValue
+	private int id;
+	private String name;
+	
+
+}

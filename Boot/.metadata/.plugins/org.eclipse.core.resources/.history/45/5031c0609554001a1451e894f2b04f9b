@@ -1,0 +1,13 @@
+package com.peaasInter.viram.BootJpa.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.peaasInter.viram.BootJpa.model.Customer;
+
+import java.util.List;
+
+public interface CustomerRepository extends CrudRepository<Customer, Integer >
+{
+		List<Customer> findByName(String name);
+		 
+}

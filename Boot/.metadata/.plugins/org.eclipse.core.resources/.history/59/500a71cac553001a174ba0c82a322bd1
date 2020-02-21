@@ -1,0 +1,15 @@
+package com.peaasInter.viram.mywebApp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController 
+{
+	@RequestMapping("home")
+	void display()
+	{
+		System.out.println("spring boot homeController display method has been called");
+	}
+
+}

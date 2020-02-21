@@ -1,0 +1,5 @@
+package com.peaasInter.viram.BootJpa.dao;
+
+public interface CustomerRepository {
+
+}

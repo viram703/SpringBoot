@@ -1,0 +1,9 @@
+package com.peaasInter.viram.SpringDataJpa;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.peaasInter.viram.SpringDataJpa.model.Employe;
+
+public interface EmployeRepository extends JpaRepository<Employe, Integer> {
+
+}

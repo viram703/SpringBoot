@@ -1,0 +1,5 @@
+package com.peaasInter.viram.SpringDataJpa;
+
+public interface EmployeRepository {
+
+}

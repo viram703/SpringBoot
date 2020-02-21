@@ -1,0 +1,5 @@
+package com.peaasInter.viram.BootJpa.model;
+
+public class Customer {
+
+}

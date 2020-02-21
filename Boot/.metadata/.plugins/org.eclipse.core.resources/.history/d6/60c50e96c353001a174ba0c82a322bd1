@@ -1,0 +1,10 @@
+package com.peaasInter.viram.mywebApp;
+
+public class HomeController {
+	
+	void display()
+	{
+		System.out.println("spring boot homeController display method has been called");
+	}
+
+}
